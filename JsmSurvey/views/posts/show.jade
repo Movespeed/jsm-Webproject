@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h3 제작자 : #{post.email}
+  h1= post.title
+  .well= post.content
+  hr
+  a.btn.btn-default(href='/posts') 목록 
+  

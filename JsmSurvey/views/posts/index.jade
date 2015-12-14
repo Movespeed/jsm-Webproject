@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  h1 설문디자인
+  
+  table.table
+    tr
+      th 제목
+      th 작성자
+      th 작성일
+    each post in posts
+      tr
+        td
+          a(href='/posts/#{post.id}')= post.title
+        td= post.email
+        td= moment(post.createdAt).format('YYYY/MM/DD')
+
+
+  a.btn.btn-primary(href='/posts/new') 설문제작
